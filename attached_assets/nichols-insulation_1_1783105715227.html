@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nichols Insulation</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #2F6F4F; --blue: #2F5D8C; --cream: #FFF8EE;
+    --slate: #36454F; --orange: #E67E22;
+    --green-dark: #1e4d37; --green-light: #3d8a64; --orange-dark: #c0631a;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--slate); overflow-x: hidden; }
+
+
+  /* ── LOGO BANNER ── */
+  .logo-banner {
+    background: var(--cream);
+    border-bottom: 3px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    padding: 0.6rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .logo-banner img {
+    height: 90px; width: auto; display: block;
+  }
+  @media (max-width: 640px) {
+    .logo-banner img { height: 70px; }
+    .logo-banner { padding: 0.5rem 1rem; }
+  }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    background: var(--green-dark); padding: 0.45rem 2rem;
+    display: flex; align-items: center; justify-content: flex-end; gap: 2rem;
+  }
+  .top-bar a { color: rgba(255,248,238,0.8); font-size: 0.82rem; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; }
+  .top-bar a:hover { color: var(--orange); }
+  .top-bar-phone { color: var(--orange) !important; font-weight: 700 !important; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--green); position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 68px;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 800;
+    color: var(--cream); text-decoration: none; letter-spacing: 0.5px;
+    display: flex; align-items: center; gap: 0.6rem; cursor: pointer;
+  }
+  .nav-links { display: flex; align-items: center; gap: 0.2rem; }
+  .nav-links a {
+    color: rgba(255,248,238,0.85); text-decoration: none;
+    font-size: 0.92rem; font-weight: 500; padding: 0.5rem 0.9rem;
+    border-radius: 6px; transition: background 0.2s, color 0.2s; cursor: pointer;
+  }
+  .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.15); color: #fff; }
+  .nav-cta {
+    background: var(--orange) !important; color: #fff !important;
+    padding: 0.5rem 1.2rem !important; font-weight: 700 !important; margin-left: 0.4rem;
+  }
+  .nav-cta:hover { background: var(--orange-dark) !important; }
+
+  /* Hamburger */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile drawer */
+  .mobile-menu {
+    display: none; flex-direction: column;
+    background: var(--green-dark); padding: 1rem 1.5rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: rgba(255,248,238,0.88); text-decoration: none; font-size: 1rem;
+    font-weight: 500; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer; transition: color 0.2s;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a.active, .mobile-menu a:hover { color: var(--orange); }
+  .mobile-menu .m-cta {
+    margin-top: 1rem; background: var(--orange); color: #fff !important;
+    text-align: center; border-radius: 8px; padding: 0.85rem !important;
+    font-weight: 700 !important; border-bottom: none !important;
+  }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── SLIDE-UP IMAGE ── */
+  .slideup-img-wrap {
+    overflow: hidden; background: var(--green-dark); line-height: 0;
+  }
+  .slideup-img-wrap > img {
+    width: 100%; max-height: 480px; object-fit: cover; display: block;
+    transform: translateY(60px); opacity: 0;
+    transition: transform 1.1s cubic-bezier(0.22,0.8,0.3,1), opacity 0.9s ease;
+  }
+  .slideup-img-wrap.revealed > img { transform: translateY(0); opacity: 1; }
+
+  /* Two-photo home layout */
+  .hero-img-duo {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+    transform: translateY(60px); opacity: 0;
+    transition: transform 1.1s cubic-bezier(0.22,0.8,0.3,1), opacity 0.9s ease;
+  }
+  .hero-img-duo img {
+    width: 100%; height: 440px; object-fit: cover; display: block;
+  }
+  .hero-img-duo img:first-child { object-position: center center; }
+  .hero-img-duo img:last-child { object-position: center top; }
+  .slideup-img-wrap.revealed .hero-img-duo { transform: translateY(0); opacity: 1; }
+
+  .hero-slideup-wrap { overflow: hidden; line-height: 0; background: var(--green-dark); }
+  .hero-slideup-wrap img {
+    width: 100%; height: 320px; object-fit: cover; display: block;
+    transform: translateY(50px); opacity: 0;
+    transition: transform 1s cubic-bezier(0.22,0.8,0.3,1), opacity 0.85s ease;
+  }
+  .hero-slideup-wrap.revealed img { transform: translateY(0); opacity: 1; }
+
+  @media (max-width: 640px) {
+    .hero-img-duo { grid-template-columns: 1fr; gap: 3px; }
+    .hero-img-duo img { height: 260px; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #3a7a5a 100%);
+    min-height: 86vh; display: flex; align-items: center; position: relative; overflow: hidden;
+  }
+  .hero-bg-pattern {
+    position: absolute; inset: 0; opacity: 0.05;
+    background-image: repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%);
+    background-size: 20px 20px;
+  }
+  .hero-content {
+    max-width: 1200px; margin: 0 auto; padding: 4rem 2rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center;
+    position: relative; width: 100%;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,255,255,0.12); color: rgba(255,248,238,0.9);
+    border: 1px solid rgba(255,255,255,0.2); border-radius: 100px;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase;
+    padding: 0.35rem 1rem; margin-bottom: 1.4rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem); font-weight: 800;
+    color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem;
+  }
+  .hero h1 span { color: #7ed6a8; }
+  .hero p { color: rgba(255,248,238,0.82); font-size: 1.05rem; line-height: 1.7; max-width: 480px; margin-bottom: 2.25rem; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: #fff; padding: 0.85rem 2rem; border-radius: 8px;
+    font-size: 1rem; font-weight: 700; border: none; cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 18px rgba(230,126,34,0.35); display: inline-block; text-decoration: none;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 6px 22px rgba(230,126,34,0.45); }
+  .btn-outline {
+    background: transparent; color: var(--cream); padding: 0.85rem 2rem; border-radius: 8px;
+    font-size: 1rem; font-weight: 600; border: 2px solid rgba(255,248,238,0.4); cursor: pointer;
+    transition: border-color 0.2s, background 0.2s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--cream); background: rgba(255,255,255,0.08); }
+  .hero-card {
+    background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18); border-radius: 20px; padding: 2rem;
+  }
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .stat-item { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 2.3rem; font-weight: 800; color: #7ed6a8; }
+  .stat-label { font-size: 0.8rem; color: rgba(255,248,238,0.75); font-weight: 500; margin-top: 0.25rem; }
+  .hero-trust { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); }
+  .hero-trust p { font-size: 0.76rem; color: rgba(255,248,238,0.6); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.75rem; }
+  .trust-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 0.3rem 0.7rem; font-size: 0.76rem; color: rgba(255,248,238,0.9); font-weight: 500; }
+
+  /* WAVE */
+  .wave-divider { line-height: 0; }
+  .wave-divider svg { display: block; width: 100%; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-tag { display: inline-block; color: var(--blue); font-size: 0.78rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3.5vw, 2.7rem); font-weight: 700; color: var(--green); line-height: 1.2; margin-bottom: 1rem; }
+  .section-sub { color: var(--slate); font-size: 1.02rem; line-height: 1.7; max-width: 580px; }
+
+  /* CARDS */
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .card {
+    background: #fff; border-radius: 14px; border: 1px solid rgba(47,111,79,0.1);
+    padding: 2rem; transition: box-shadow 0.25s, transform 0.25s; position: relative; overflow: hidden;
+  }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--green), var(--blue)); }
+  .card:hover { box-shadow: 0 8px 32px rgba(47,111,79,0.14); transform: translateY(-3px); }
+  .card-icon {
+    width: 52px; height: 52px; border-radius: 12px;
+    background: linear-gradient(135deg, #e8f5ee, #d0ead8);
+    display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;
+  }
+  .card-icon svg { width: 26px; height: 26px; }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--green); margin-bottom: 0.5rem; }
+  .card p { font-size: 0.92rem; color: var(--slate); line-height: 1.65; }
+
+  /* BLUE SECTION */
+  .blue-section { background: linear-gradient(135deg, var(--blue) 0%, #24487a 100%); color: var(--cream); }
+  .blue-section .section-title { color: var(--cream); }
+  .blue-section .section-tag { color: rgba(255,248,238,0.85); }
+  .blue-section .section-sub { color: var(--cream); opacity: 0.92; }
+  .blue-section .process-step h4 { color: var(--cream); }
+  .blue-section .process-step p { color: rgba(255,248,238,0.82); }
+  .blue-section .step-num { background: rgba(255,255,255,0.18); color: var(--cream); border: 2px solid rgba(255,248,238,0.4); }
+
+  /* CTA BANNER */
+  .cta-banner { background: var(--orange); padding: 4rem 2rem; text-align: center; }
+  .cta-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 0.75rem; }
+  .cta-banner p { color: rgba(255,255,255,0.88); font-size: 1.02rem; margin-bottom: 2rem; }
+  .btn-white {
+    background: #fff; color: var(--orange); padding: 0.85rem 2.2rem; border-radius: 8px;
+    font-size: 1rem; font-weight: 700; text-decoration: none; display: inline-block;
+    transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    border: none; cursor: pointer;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,0.24); }
+
+  /* FOOTER */
+  footer { background: var(--green-dark); color: rgba(255,248,238,0.8); padding: 3.5rem 2rem 1.5rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+  .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--cream); margin-bottom: 0.75rem; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.7; }
+  .footer-col h4 { color: var(--cream); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 1rem; }
+  .footer-col a { display: block; color: rgba(255,248,238,0.7); font-size: 0.88rem; text-decoration: none; margin-bottom: 0.5rem; cursor: pointer; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--orange); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .footer-bottom p { font-size: 0.8rem; color: rgba(255,248,238,0.5); }
+  .phone-link { color: var(--orange) !important; font-weight: 700; }
+
+  /* PAGE HERO */
+  .page-hero-simple {
+    background: linear-gradient(150deg, var(--green) 0%, var(--green-dark) 100%);
+    padding: 5rem 2rem 4rem; text-align: center;
+  }
+  .page-hero-simple h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4vw, 3rem); color: var(--cream); margin-bottom: 0.75rem; }
+  .page-hero-simple p { color: rgba(255,248,238,0.82); font-size: 1rem; max-width: 540px; margin: 0 auto; line-height: 1.65; }
+
+  /* VALUES */
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+  .value-item { background: #fff; border-radius: 12px; padding: 1.75rem; border-left: 4px solid var(--green); text-align: center; }
+  .value-item .v-icon { display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; }
+  .value-item .v-icon svg { width: 32px; height: 32px; }
+  .value-item h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green); margin-bottom: 0.4rem; }
+  .value-item p { font-size: 0.87rem; color: var(--slate); line-height: 1.6; }
+
+  /* SERVICES */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-top: 3rem; }
+  .service-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid rgba(47,111,79,0.1); transition: box-shadow 0.25s, transform 0.25s; }
+  .service-card:hover { box-shadow: 0 10px 36px rgba(47,111,79,0.15); transform: translateY(-4px); }
+  .service-card-top { background: linear-gradient(135deg, var(--blue) 0%, #24487a 100%); padding: 1.75rem; display: flex; align-items: center; gap: 1rem; }
+  .service-card-top .s-icon { width: 44px; height: 44px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.18); border-radius: 10px; }
+  .service-card-top .s-icon svg { width: 24px; height: 24px; }
+  .service-card-top h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--cream); }
+  .service-card-body { padding: 1.5rem; }
+  .service-card-body p { font-size: 0.92rem; color: var(--slate); line-height: 1.65; margin-bottom: 1rem; }
+  .service-list { list-style: none; }
+  .service-list li { font-size: 0.87rem; color: var(--slate); padding: 0.28rem 0; display: flex; align-items: center; gap: 0.5rem; }
+  .service-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
+
+  /* CONTACT */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+  .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--green); margin-bottom: 1.5rem; }
+  .contact-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+  .contact-item-icon { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, #e8f5ee, #d0ead8); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-item-icon svg { width: 22px; height: 22px; }
+  .contact-item-text strong { display: block; color: var(--green); font-size: 0.83rem; font-weight: 700; margin-bottom: 0.2rem; }
+  .contact-item-text span { color: var(--slate); font-size: 0.93rem; }
+  .contact-form { background: #fff; border-radius: 16px; padding: 2.5rem; border: 1px solid rgba(47,111,79,0.12); }
+  .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.35rem; color: var(--green); margin-bottom: 1.75rem; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; font-size: 0.83rem; font-weight: 600; color: var(--slate); margin-bottom: 0.4rem; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.72rem 1rem; border: 1.5px solid rgba(47,111,79,0.2); border-radius: 8px;
+    font-family: 'Inter', sans-serif; font-size: 0.93rem; color: var(--slate);
+    background: var(--cream); transition: border-color 0.2s; outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); }
+  .form-group textarea { height: 115px; resize: vertical; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .submit-btn { width: 100%; background: var(--orange); color: #fff; padding: 0.9rem; border-radius: 8px; font-size: 1rem; font-weight: 700; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; font-family: 'Inter', sans-serif; }
+  .submit-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+  /* TESTIMONIALS */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .testimonial { background: #fff; border-radius: 14px; padding: 1.75rem; border: 1px solid rgba(47,111,79,0.1); position: relative; }
+  .testimonial::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--green); opacity: 0.12; position: absolute; top: 0.5rem; left: 1rem; line-height: 1; }
+  .testimonial p { font-size: 0.93rem; color: var(--slate); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; padding-top: 1rem; }
+  .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+  .author-avatar { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--green), var(--blue)); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .author-name { font-weight: 700; font-size: 0.87rem; color: var(--green); }
+  .author-loc { font-size: 0.76rem; color: #888; }
+  .stars { color: #f4b942; font-size: 0.85rem; margin-bottom: 0.15rem; }
+
+  /* PROCESS */
+  .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; margin-top: 3rem; }
+  .process-step { text-align: center; padding: 2rem 1.25rem; }
+  .step-num { width: 54px; height: 54px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin: 0 auto 1.25rem; }
+  .process-step h4 { font-family: 'Playfair Display', serif; font-size: 1.02rem; color: var(--green); margin-bottom: 0.5rem; }
+  .process-step p { font-size: 0.87rem; color: var(--slate); line-height: 1.6; }
+
+  /* ABOUT GRID */
+  .about-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .about-two-col { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .hero-content { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-card { display: none; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .footer-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .top-bar { display: none; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 3.5rem 1.25rem; }
+    .hero-content { padding: 3rem 1.25rem; }
+    .hero h1 { font-size: 2.1rem; }
+    .hero p { font-size: 0.97rem; }
+    .hero-btns { flex-direction: column; }
+    .hero-btns .btn-primary, .hero-btns .btn-outline { width: 100%; text-align: center; }
+    .page-hero-simple { padding: 3.5rem 1.25rem 3rem; }
+    .cta-banner { padding: 3rem 1.25rem; }
+    .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+    .footer-brand { grid-column: auto; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .contact-form { padding: 1.75rem 1.25rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .popup-card img { height: 200px; }
+    .popup-card-body { padding: 1.25rem 1.25rem 1.75rem; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .values-grid { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 400px) {
+    .values-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+  }
+
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-in { animation: fadeInUp 0.55s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+</style>
+</head>
+<body>
+
+<!-- LOGO BANNER -->
+<div class="logo-banner">
+  <img src="Logo.png" alt="Nichols Insulation Logo"/>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <a href="mailto:adam@nicholsinsulation.com">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+    adam@nicholsinsulation.com
+  </a>
+  <a href="tel:9313204426" style="color:rgba(255,248,238,0.8);font-size:0.82rem;">James: (931) 320-4426</a>
+  <a href="tel:9318015391" class="top-bar-phone">Adam: (931) 801-5391</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo" onclick="showPage('home')">
+      <img src="Logo.png" alt="Nichols Insulation" style="height:46px;width:auto;filter:brightness(0) invert(1);"/>
+    </span>
+    <div class="nav-links">
+      <a id="nav-home" class="active" onclick="showPage('home')">Home</a>
+      <a id="nav-about" onclick="showPage('about')">About</a>
+      <a id="nav-services" onclick="showPage('services')">Services</a>
+      <a id="nav-contact" onclick="showPage('contact')">Contact</a>
+      <a class="nav-cta" onclick="showPage('contact')">Free Estimate</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a id="mnav-home" class="active" onclick="showPage('home');toggleMenu()">Home</a>
+    <a id="mnav-about" onclick="showPage('about');toggleMenu()">About</a>
+    <a id="mnav-services" onclick="showPage('services');toggleMenu()">Services</a>
+    <a id="mnav-contact" onclick="showPage('contact');toggleMenu()">Contact</a>
+    <a class="m-cta" onclick="showPage('contact');toggleMenu()">Get a Free Estimate</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HOME PAGE ═══════════════ -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content" style="grid-template-columns:1fr; text-align:center; max-width:860px;">
+      <div class="animate-in">
+        <span class="hero-badge">Licensed &amp; Insured Professionals</span>
+        <h1>Keep Your Home <span>Warm, Cool &amp; Efficient.</span></h1>
+        <p style="margin-left:auto; margin-right:auto;">Nichols Insulation delivers expert residential and commercial insulation — on time, within budget, and built to last decades.</p>
+        <div class="hero-btns" style="justify-content:center;">
+          <button class="btn-primary" onclick="showPage('contact')">Get a Free Estimate</button>
+          <button class="btn-outline" onclick="showPage('services')">Our Services</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE-UP IMAGES -->
+  <div class="slideup-img-wrap" id="hero-img-home">
+    <div class="hero-img-duo">
+      <img src="Insulation_1.jpg" alt="Fiberglass batt insulation installed in wall framing"/>
+      <img src="insulatio_2.jpg" alt="Nichols Insulation crew member installing insulation"/>
+    </div>
+  </div>
+
+
+  <section style="background:var(--cream);">
+    <div class="section-inner">
+      <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;margin-bottom:1rem;">
+        <div><span class="section-tag">Why Nichols</span></div>
+        <div style="margin-left:auto;display:flex;gap:1.5rem;flex-wrap:wrap;">
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--green);">5.0★</div><div style="font-size:0.78rem;color:#888;">Google Rating</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--green);">100%</div><div style="font-size:0.78rem;color:#888;">Licensed &amp; Insured</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--green);">Local</div><div style="font-size:0.78rem;color:#888;">Clarksville, TN</div></div>
+        </div>
+      </div>
+      <h2 class="section-title">The Right Team for Your Insulation Needs</h2>
+      <p class="section-sub">We're not a one-size-fits-all crew. Every home is different, and we tailor our approach to match your exact needs and budget.</p>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/><polyline points="9 21 9 12 15 12 15 21"/></svg>
+          </div>
+          <h3>Residential Experts</h3>
+          <p>From attics to wall cavities, we insulate every part of your home with materials and methods matched to your climate and construction type.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <h3>Commercial Solutions</h3>
+          <p>Large-scale projects handled with precision — warehouses, multi-family units, and commercial buildings insulated on schedule and within scope.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <h3>Energy Efficiency First</h3>
+          <p>Our work consistently reduces heating and cooling costs by 20–40%. We help you choose the right R-value for maximum long-term savings.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Guaranteed Workmanship</h3>
+          <p>Every project comes with our written workmanship guarantee. If something isn't right, we make it right — no questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-section">
+    <div class="section-inner">
+      <span class="section-tag">How It Works</span>
+      <h2 class="section-title">Simple. Professional. Done Right.</h2>
+      <div class="process-steps">
+        <div class="process-step"><div class="step-num">1</div><h4>Free Estimate</h4><p>We visit your property, assess your current insulation, and provide a detailed quote at no cost to you.</p></div>
+        <div class="process-step"><div class="step-num">2</div><h4>Custom Plan</h4><p>Our team designs a solution matched to your structure, local code requirements, and energy goals.</p></div>
+        <div class="process-step"><div class="step-num">3</div><h4>Expert Install</h4><p>Certified installers arrive on time, complete the job cleanly, and walk you through the finished work.</p></div>
+        <div class="process-step"><div class="step-num">4</div><h4>You Save</h4><p>Enjoy lower energy bills and a home that holds its temperature comfortably season after season.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--cream);">
+    <div class="section-inner">
+      <span class="section-tag">Customer Reviews</span>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <div style="display:flex;align-items:baseline;gap:0.5rem;">
+          <span style="font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:800;color:var(--green);line-height:1;">5.0</span>
+          <div>
+            <div style="color:#f4b942;font-size:1.3rem;letter-spacing:2px;">★★★★★</div>
+            <div style="font-size:0.82rem;color:#888;margin-top:0.1rem;">Google Reviews</div>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/place/Nichols+Insulation" target="_blank" style="margin-left:auto;background:#fff;border:1.5px solid rgba(47,111,79,0.25);color:var(--green);padding:0.5rem 1.1rem;border-radius:8px;font-size:0.85rem;font-weight:600;text-decoration:none;transition:background 0.2s;">Write a Review</a>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>Great guys! Worked hard and sealed every nook and cranny in our new project!</p>
+          <div class="testimonial-author"><div class="author-avatar">AK</div><div><div class="author-name">Atom Knaak</div><div class="author-loc">Google Review · 5 months ago</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>Great family owned business owned and operated by Clarksville native Shorty Nichols.</p>
+          <div class="testimonial-author"><div class="author-avatar">AJ</div><div><div class="author-name">Annie Lois Jones-Castillo</div><div class="author-loc">Google Local Guide · 4 years ago</div></div></div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>Excellent experience!</p>
+          <div class="testimonial-author"><div class="author-avatar">AH</div><div><div class="author-name">Angell Henderson</div><div class="author-loc">Google Local Guide · 6 years ago</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>Ready to Lower Your Energy Bills?</h2>
+    <p>Call us today or request your free, no-obligation estimate online.</p>
+    <button class="btn-white" onclick="showPage('contact')">Get a Free Estimate</button>
+    <p style="margin-top:1.2rem;font-size:0.93rem;color:rgba(255,255,255,0.9);">Call us directly: <strong>(931) 801-5391</strong></p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Nichols Insulation</h3>
+          <p>Providing expert insulation services to homeowners and commercial clients since 1999. Energy-efficient solutions, guaranteed workmanship.</p>
+          <p style="margin-top:1rem;"><a class="phone-link" href="tel:9318015391">(931) 801-5391</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a onclick="showPage('services')">Blown-In Insulation</a>
+          <a onclick="showPage('services')">Batt &amp; Roll Insulation</a>
+          <a onclick="showPage('services')">Radiant Barriers</a>
+          <a onclick="showPage('services')">Commercial Insulation</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a onclick="showPage('home')">Home</a>
+          <a onclick="showPage('about')">About Us</a>
+          <a onclick="showPage('services')">Services</a>
+          <a onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Nichols Insulation. All rights reserved.</p>
+        <p>Licensed &amp; Insured · Energy Star Partner · BBB Accredited</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ ABOUT PAGE ═══════════════ -->
+<div id="page-about" class="page">
+
+  <div class="page-hero-simple">
+    <h1>About Nichols Insulation</h1>
+    <p>A family-owned company with 25+ years of experience making homes and businesses more comfortable and energy-efficient.</p>
+  </div>
+  <div class="hero-slideup-wrap" id="hero-img-about">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80" alt="Our team at work"/>
+  </div>
+
+  <section style="background:var(--cream);">
+    <div class="section-inner">
+      <div class="about-two-col">
+        <div>
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Started by a Craftsman, Grown by Trust</h2>
+          <p style="color:var(--slate);line-height:1.75;margin-bottom:1.25rem;">Nichols Insulation was founded by James Nichols — a seasoned insulation professional who believed homeowners deserved honest advice and quality work, every single time.</p>
+          <p style="color:var(--slate);line-height:1.75;margin-bottom:1.25rem;">What started as a one-truck operation has grown into a trusted local business serving the Clarksville region. Our values haven't changed: show up on time, do excellent work, and treat every customer like a neighbor.</p>
+          <p style="color:var(--slate);line-height:1.75;">Today, James works alongside his son Adam Nichols, continuing the family legacy of craftsmanship and integrity that has earned us a 5.0-star Google rating and hundreds of satisfied customers.</p>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--green),var(--blue));border-radius:20px;padding:2.5rem;color:var(--cream);">
+          <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;margin-bottom:1.5rem;">Our Milestones</h3>
+          <div style="display:flex;flex-direction:column;gap:1.25rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="background:rgba(255,255,255,0.2);border-radius:6px;padding:0.2rem 0.6rem;font-weight:700;font-size:0.83rem;white-space:nowrap;">Founded</span><span style="font-size:0.91rem;opacity:0.9;">James Nichols founded Nichols Insulation in Clarksville, TN</span></div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="background:rgba(255,255,255,0.2);border-radius:6px;padding:0.2rem 0.6rem;font-weight:700;font-size:0.83rem;white-space:nowrap;">Growth</span><span style="font-size:0.91rem;opacity:0.9;">Expanded services across the greater Clarksville region, earning Energy Star certification</span></div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="background:rgba(255,255,255,0.2);border-radius:6px;padding:0.2rem 0.6rem;font-weight:700;font-size:0.83rem;white-space:nowrap;">Family</span><span style="font-size:0.91rem;opacity:0.9;">Adam Nichols joined the business, bringing fresh energy to the family team</span></div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;"><span style="background:rgba(255,255,255,0.2);border-radius:6px;padding:0.2rem 0.6rem;font-weight:700;font-size:0.83rem;white-space:nowrap;">Today</span><span style="font-size:0.91rem;opacity:0.9;">5-star rated, locally trusted, still family-owned and operated</span></div>
+          </div>
+          <div style="margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.2);">
+            <p style="font-size:0.8rem;opacity:0.75;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.6rem;">Reach the Team</p>
+            <p style="font-size:0.92rem;font-weight:600;">James Nichols — <a href="tel:9313204426" style="color:var(--cream);text-decoration:none;">(931) 320-4426</a></p>
+            <p style="font-size:0.92rem;font-weight:600;margin-top:0.4rem;">Adam Nichols — <a href="tel:9318015391" style="color:var(--cream);text-decoration:none;">(931) 801-5391</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;">
+    <div class="section-inner">
+      <span class="section-tag">What Drives Us</span>
+      <h2 class="section-title">Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <h4>Integrity</h4>
+          <p>We quote honestly and never recommend more than what your home actually needs.</p>
+        </div>
+        <div class="value-item">
+          <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <h4>Expertise</h4>
+          <p>Continuous training keeps our team current with the latest materials and installation methods.</p>
+        </div>
+        <div class="value-item">
+          <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 0c0 4-4 6-4 10a4 4 0 0 0 8 0c0-4-4-6-4-10z"/></svg></div>
+          <h4>Sustainability</h4>
+          <p>We prioritize eco-friendly materials and help clients qualify for energy rebates and incentives.</p>
+        </div>
+        <div class="value-item">
+          <div class="v-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h4>Excellence</h4>
+          <p>Every job is inspected before we leave. Our standard isn't "done" — it's done right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>Meet the Team Behind the Work</h2>
+    <p>We'd love to earn your trust. Reach out for a no-pressure, free estimate.</p>
+    <button class="btn-white" onclick="showPage('contact')">Contact Us Today</button>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>Nichols Insulation</h3><p>Family-owned insulation experts serving the region since 1999.</p><p style="margin-top:1rem;"><a class="phone-link" href="tel:9318015391">(931) 801-5391</a></p></div>
+        <div class="footer-col"><h4>Services</h4><a onclick="showPage('services')">Blown-In Insulation</a><a onclick="showPage('services')">Batt Insulation</a><a onclick="showPage('services')">Radiant Barriers</a></div>
+        <div class="footer-col"><h4>Company</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Nichols Insulation.</p><p>Licensed &amp; Insured · Energy Star Partner</p></div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ SERVICES PAGE ═══════════════ -->
+<div id="page-services" class="page">
+
+  <div class="page-hero-simple">
+    <h1>Our Insulation Services</h1>
+    <p>Expert installation for every project type — residential, commercial, new construction, and retrofit.</p>
+  </div>
+  <div class="hero-slideup-wrap" id="hero-img-services">
+    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1400&q=80" alt="Insulation installation"/>
+  </div>
+
+  <section style="background:var(--cream);">
+    <div class="section-inner">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Comprehensive Insulation Solutions</h2>
+      <p class="section-sub">Every service is backed by our workmanship guarantee and performed by certified, experienced installers.</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h.01M7 12h.01M11 12h.01M15 12h.01M19 12h.01"/><path d="M4 8c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8z"/><path d="M2 12c0 0 2-5 10-5s10 5 10 5"/></svg></div>
+            <h3>Blown-In Insulation</h3>
+          </div>
+          <div class="service-card-body">
+            <p>Ideal for attics and hard-to-reach areas. We blow loose-fill fiberglass or cellulose to achieve the precise R-value your home needs.</p>
+            <ul class="service-list">
+              <li>Fiberglass or cellulose options</li><li>Attic, wall, and floor applications</li><li>Minimal disruption to your home</li><li>Fast, same-day installation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="9" x2="9" y2="21"/><line x1="15" y1="9" x2="15" y2="21"/></svg></div>
+            <h3>Batt &amp; Roll Insulation</h3>
+          </div>
+          <div class="service-card-body">
+            <p>Fiberglass or mineral wool batts — installed cleanly and precisely in walls, floors, and ceilings during new construction or renovation.</p>
+            <ul class="service-list">
+              <li>Fiberglass and mineral wool options</li><li>New construction and retrofits</li><li>Cost-effective performance</li><li>Fire-resistant options available</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+            <h3>Radiant Barriers</h3>
+          </div>
+          <div class="service-card-body">
+            <p>Reflective foil barriers installed in attics dramatically reduce summer cooling loads by blocking radiant heat transfer from your roof.</p>
+            <ul class="service-list">
+              <li>Reduces cooling costs up to 25%</li><li>Ideal for hot climates</li><li>Works alongside existing insulation</li><li>Long lifespan, no maintenance required</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-top">
+            <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+            <h3>Commercial Insulation</h3>
+          </div>
+          <div class="service-card-body">
+            <p>Large-scale projects handled on schedule and within scope. We work with general contractors, property managers, and developers.</p>
+            <ul class="service-list">
+              <li>Warehouses &amp; industrial buildings</li><li>Multi-family residential units</li><li>Office &amp; retail spaces</li><li>Certified for commercial code compliance</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-section">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-tag">Not Sure Which Type You Need?</span>
+      <h2 class="section-title">We'll Help You Choose the Right Solution</h2>
+      <p class="section-sub" style="margin:0 auto 2rem;">Our free on-site assessment includes an R-value recommendation, material comparison, and full transparent quote — no sales pressure.</p>
+      <button class="btn-primary" onclick="showPage('contact')">Schedule a Free Assessment</button>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>Every Home is Different. Your Quote Should Be Too.</h2>
+    <p>Get a personalized insulation plan and no-obligation estimate today.</p>
+    <button class="btn-white" onclick="showPage('contact')">Request Your Free Estimate</button>
+    <p style="margin-top:1.2rem;font-size:0.93rem;color:rgba(255,255,255,0.9);">Call us: <strong>(931) 801-5391</strong></p>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>Nichols Insulation</h3><p>Expert insulation for residential and commercial clients.</p><p style="margin-top:1rem;"><a class="phone-link" href="tel:9318015391">(931) 801-5391</a></p></div>
+        <div class="footer-col"><h4>Services</h4><a onclick="showPage('services')">Blown-In</a><a onclick="showPage('services')">Batt Insulation</a><a onclick="showPage('services')">Radiant Barriers</a><a onclick="showPage('services')">Commercial</a></div>
+        <div class="footer-col"><h4>Company</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Nichols Insulation.</p><p>Licensed · Insured · Certified</p></div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════ CONTACT PAGE ═══════════════ -->
+<div id="page-contact" class="page">
+
+  <div class="page-hero-simple">
+    <h1>Contact Us Today</h1>
+    <p>Have a question or ready to get started? Reach out and we'll respond within one business day.</p>
+  </div>
+  <div class="hero-slideup-wrap" id="hero-img-contact">
+    <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=1400&q=80" alt="Customer consultation"/>
+  </div>
+
+  <section style="background:var(--cream);">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Adam Nichols</h3>
+          <p style="color:var(--slate);font-size:0.93rem;line-height:1.7;margin-bottom:2rem;">Whether you need a quick question answered or want to schedule a full assessment, we're here to help. No pressure, no obligation.</p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="contact-item-text"><strong>Phone</strong><span>(931) 801-5391</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
+            <div class="contact-item-text"><strong>Email</strong><span>adam@nicholsinsulation.com</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="contact-item-text"><strong>Office</strong><span>3100 Dunlop Ln<br/>Clarksville, TN 37043</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#2F6F4F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="contact-item-text"><strong>Hours</strong><span>Mon–Fri: 7am–6pm<br/>Sat: 8am–2pm · Sun: Closed</span></div>
+          </div>
+
+          <div style="background:#fff;border-radius:12px;padding:1.5rem;margin-top:1.5rem;border:1px solid rgba(47,111,79,0.12);">
+            <h4 style="font-family:'Playfair Display',serif;color:var(--green);margin-bottom:0.75rem;">Service Area</h4>
+            <p style="font-size:0.88rem;color:var(--slate);line-height:1.65;">We serve Springfield, Riverside, Maplewood, Clayton, Fairview, and surrounding communities within a 60-mile radius.</p>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Request Your Free Estimate</h3>
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" placeholder="Adam"/></div>
+            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Nichols"/></div>
+          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@example.com"/></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(931) 801-5391"/></div>
+          <div class="form-group">
+            <label>Property Type</label>
+            <select>
+              <option value="">Select one...</option>
+              <option>Single-Family Home</option>
+              <option>Multi-Family / Duplex</option>
+              <option>Commercial Building</option>
+              <option>New Construction</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Service Interested In</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Blown-In Insulation</option>
+              <option>Batt &amp; Roll Insulation</option>
+              <option>Radiant Barriers</option>
+              <option>Commercial Insulation</option>
+              <option>Not Sure — Need Assessment</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Tell Us About Your Project</label><textarea placeholder="Describe your property, current insulation situation, or any specific concerns..."></textarea></div>
+          <button class="submit-btn" onclick="handleSubmit()">Send My Request — It's Free</button>
+          <p style="font-size:0.76rem;color:#999;margin-top:0.75rem;text-align:center;">We respond within 1 business day. No spam, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <h2>Prefer to Call?</h2>
+    <p>Our team is available Monday through Saturday to answer your questions.</p>
+    <a href="tel:9318015391" class="btn-white">(931) 801-5391</a>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><h3>Nichols Insulation</h3><p>Expert insulation services for residential and commercial clients.</p><p style="margin-top:1rem;"><a class="phone-link" href="tel:9318015391">(931) 801-5391</a></p></div>
+        <div class="footer-col"><h4>Services</h4><a onclick="showPage('services')">Blown-In</a><a onclick="showPage('services')">Batt Insulation</a><a onclick="showPage('services')">Radiant Barriers</a><a onclick="showPage('services')">Commercial</a></div>
+        <div class="footer-col"><h4>Company</h4><a onclick="showPage('home')">Home</a><a onclick="showPage('about')">About</a><a onclick="showPage('services')">Services</a><a onclick="showPage('contact')">Contact</a></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Nichols Insulation.</p><p>Licensed · Insured · Certified</p></div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  const pages = ["home","about","services","contact"];
+
+  function showPage(name) {
+    pages.forEach(p => {
+      document.getElementById("page-"+p).classList.toggle("active", p === name);
+      const d = document.getElementById("nav-"+p);
+      if(d) d.classList.toggle("active", p === name);
+      const m = document.getElementById("mnav-"+p);
+      if(m) m.classList.toggle("active", p === name);
+    });
+    window.scrollTo(0,0);
+    setTimeout(() => revealImg(name), 120);
+  }
+
+  function revealImg(name) {
+    const el = document.getElementById("hero-img-" + name);
+    if(el) el.classList.add("revealed");
+  }
+
+  function toggleMenu() {
+    document.getElementById("hamburger").classList.toggle("open");
+    document.getElementById("mobile-menu").classList.toggle("open");
+  }
+
+  function handleSubmit() {
+    alert("Thank you! Your request has been received. We'll be in touch within 1 business day.");
+  }
+
+  // Trigger home image on load
+  setTimeout(() => revealImg("home"), 200);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Nichols Insulation"
+version = "1.0.0"
+id = "artifacts/nichols-insulation"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23012
+
+[services.development]
+run = "pnpm --filter @workspace/nichols-insulation run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nichols-insulation", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nichols-insulation/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23012"
+BASE_PATH = "/"

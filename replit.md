@@ -1,6 +1,6 @@
-# [Project name]
+# Nichols Insulation
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Multi-page marketing website for Nichols Insulation — a family-owned insulation contractor in Clarksville, TN — with separate URLs for Home, About, Services, and Contact pages.
 
 ## Run & Operate
 
@@ -22,7 +22,11 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/nichols-insulation/src/pages/` — HomePage, AboutPage, ServicesPage, ContactPage (one file per route)
+- `artifacts/nichols-insulation/src/components/` — shared Header and Footer used on every page
+- `artifacts/nichols-insulation/src/App.tsx` — wouter routing (`/`, `/about`, `/services`, `/contact`)
+- `artifacts/nichols-insulation/src/index.css` — brand CSS custom properties (green/orange/cream palette)
+- `attached_assets/` — Logo, insulation photos used via `@assets` Vite alias
 
 ## Architecture decisions
 
@@ -30,7 +34,11 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+4-page website (frontend-only, no backend) built with React + Vite + wouter:
+- **Home** (`/`) — hero, photo strip, why-us cards, process steps, reviews, CTA
+- **About** (`/about`) — company story, milestones card, core values
+- **Services** (`/services`) — 4 service cards (blown-in, batt & roll, radiant barriers, commercial)
+- **Contact** (`/contact`) — contact info + form with react-hook-form/zod validation
 
 ## User preferences
 
