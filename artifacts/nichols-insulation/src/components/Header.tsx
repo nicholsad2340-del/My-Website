@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
-import logoPath from '@assets/Logo_1783105715227.png';
+import logoPath from '@assets/Logo_1783106526737.png';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
@@ -16,13 +16,6 @@ export default function Header() {
 
   return (
     <header className="w-full flex flex-col z-50">
-      {/* Logo Banner */}
-      <div className="bg-background border-b-4 border-primary flex justify-center items-center py-4 px-4">
-        <Link href="/">
-          <img src={logoPath} alt="Nichols Insulation Logo" className="h-[90px] w-auto cursor-pointer" data-testid="img-logo-main" />
-        </Link>
-      </div>
-
       {/* Top Bar (Dark Green) */}
       <div className="hidden md:flex bg-secondary text-white py-2 px-8 justify-end text-sm border-b border-secondary-foreground/10">
         <div className="flex space-x-6 items-center">
@@ -42,7 +35,6 @@ export default function Header() {
                   src={logoPath} 
                   alt="Nichols Insulation Logo Small" 
                   className="h-[46px] w-auto cursor-pointer transition-transform hover:scale-105" 
-                  style={{ filter: "brightness(0) invert(1)" }} 
                   data-testid="img-logo-small"
                 />
               </Link>
