@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationBattImg from '@assets/insulatio_2_1783105715228.jpg';
+import insulationBattImg from '@assets/jobs4_1788023621576.jpg';
 import { Wind, Layers, Sun, Factory, CheckCircle2 } from 'lucide-react';
+import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 
 export default function ServicesPage() {
   useEffect(() => {
@@ -83,6 +84,13 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <ProjectGallery
+        photos={jobPhotoSets.installation}
+        eyebrow="Insulation in Action"
+        title="A Better Install Starts With Better Work"
+        description="See the kind of detail our team brings to homes and buildings across the Clarksville area."
+      />
 
       {/* Not Sure Section */}
       <section className="py-24 px-4 bg-gradient-to-br from-muted to-primary text-white text-center">

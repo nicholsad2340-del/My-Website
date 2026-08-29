@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationWorkerImg from '@assets/Insulation_1_1783105715228.jpg';
+import insulationWorkerImg from '@assets/jobs5_1788023621577.jpg';
 import { CheckCircle2, Shield, HeartHandshake, Award } from 'lucide-react';
+import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 
 export default function AboutPage() {
   useEffect(() => {
@@ -90,6 +91,14 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <ProjectGallery
+        photos={jobPhotoSets.framing}
+        eyebrow="Craftsmanship You Can See"
+        title="Built Carefully, From the Inside Out"
+        description="Every project reflects the way we work: careful preparation, a precise fit, and a job site treated with the same respect as your home."
+        dark
+      />
 
       {/* Core Values */}
       <section className="py-24 px-4 bg-white">

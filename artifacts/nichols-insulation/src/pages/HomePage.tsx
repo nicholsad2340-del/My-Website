@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationWorkerImg from '@assets/Insulation_1_1783105715228.jpg';
-import insulationBattImg from '@assets/insulatio_2_1783105715228.jpg';
+import insulationWorkerImg from '@assets/jobs5_1788023621577.jpg';
+import insulationBattImg from '@assets/jobs4_1788023621576.jpg';
 import { CheckCircle2, Home, Building2, Leaf, ShieldCheck, MapPin } from 'lucide-react';
 import { SiGoogle } from 'react-icons/si';
+import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 
 export default function HomePage() {
   useEffect(() => {
@@ -98,6 +99,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ProjectGallery
+        photos={jobPhotoSets.attic}
+        eyebrow="Recent Work"
+        title="The Difference Is in the Details"
+        description="From attic floors to the tightest corners, our crews take pride in leaving every project with consistent, professional coverage."
+      />
 
       {/* How It Works Section */}
       <section className="py-24 px-4 bg-gradient-to-b from-muted to-secondary text-white relative overflow-hidden">

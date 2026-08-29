@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
+import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 
 const contactSchema = z.object({
   firstName: z.string().min(2, 'First name is required'),
@@ -309,6 +310,14 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <ProjectGallery
+        photos={jobPhotoSets.details}
+        eyebrow="Your Project, Our Priority"
+        title="Let's Make Your Space More Comfortable"
+        description="Have a project in mind? Send us the details and we'll help you find the right insulation solution."
+        dark
+      />
 
       {/* CTA Banner */}
       <section className="py-20 px-4 bg-accent text-white text-center">
