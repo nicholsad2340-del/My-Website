@@ -13,34 +13,23 @@ import jobs11 from '@assets/jobs11_1788023621580.jpeg';
 export type ProjectPhoto = {
   src: string;
   alt: string;
-  label: string;
 };
 
 export const jobPhotoSets = {
   attic: [
-    { src: jobs1, alt: 'Fresh blown-in insulation measured in an attic', label: 'Attic coverage' },
-    { src: jobs2, alt: 'Blown-in insulation across an attic floor', label: 'Consistent depth' },
-    { src: jobs3, alt: 'Finished attic insulation around framing and ductwork', label: 'Complete coverage' },
-    { src: jobs7, alt: 'Blown-in insulation filling an attic corner', label: 'Hard-to-reach areas' },
-    { src: jobs8, alt: 'Insulation installed around attic framing', label: 'A careful install' },
+    { src: jobs3, alt: 'Finished attic insulation around framing and ductwork' },
   ] satisfies ProjectPhoto[],
   framing: [
-    { src: jobs4, alt: 'Fiberglass batts installed between wall studs', label: 'Wall framing' },
-    { src: jobs5, alt: 'Installer placing insulation in a new construction wall', label: 'New construction' },
-    { src: jobs6, alt: 'Insulated wall cavities ready for the next phase', label: 'Ready for finish work' },
-    { src: jobs9, alt: 'Fiberglass insulation fitted into a framed wall', label: 'A precise fit' },
+    { src: jobs5, alt: 'Installer placing insulation in a new construction wall' },
+    { src: jobs6, alt: 'Insulated wall cavities ready for the next phase' },
   ] satisfies ProjectPhoto[],
   installation: [
-    { src: jobs4, alt: 'Pink fiberglass batts fitted around a doorway', label: 'Clean edges' },
-    { src: jobs5, alt: 'Insulation installation underway in a bright new build', label: 'Work in progress' },
-    { src: jobs6, alt: 'Insulation filling wall cavities before drywall', label: 'Built to perform' },
-    { src: jobs1, alt: 'Attic insulation reaching the recommended depth', label: 'Energy savings' },
-    { src: jobs3, alt: 'Insulation surrounding attic framing', label: 'Thorough coverage' },
-    { src: jobs8, alt: 'Insulation tucked around attic structure', label: 'Details matter' },
+    { src: jobs8, alt: 'Insulation tucked around attic structure' },
+    { src: jobs9, alt: 'Fiberglass insulation fitted into a framed wall' },
   ] satisfies ProjectPhoto[],
   details: [
-    { src: jobs10, alt: 'Close detail of insulation installed inside wall framing', label: 'The details matter' },
-    { src: jobs11, alt: 'Finished insulation work inside a framed room', label: 'Done right' },
+    { src: jobs10, alt: 'Close detail of insulation installed inside wall framing' },
+    { src: jobs11, alt: 'Finished insulation work inside a framed room' },
   ] satisfies ProjectPhoto[],
 };
 
@@ -92,14 +81,18 @@ export default function ProjectGallery({
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-fr">
+        <div
+          className={`grid gap-3 md:gap-4 auto-rows-fr ${
+            photos.length <= 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 md:grid-cols-4'
+          }`}
+        >
           {photos.map((photo, index) => (
             <figure
               key={photo.src}
               className={`group relative overflow-hidden rounded-xl ${
-                index === 0
+                photos.length > 2 && index === 0
                   ? 'col-span-2 row-span-2 min-h-[350px] md:min-h-[520px]'
-                  : 'min-h-[170px] md:min-h-[250px]'
+                  : 'min-h-[300px] md:min-h-[420px]'
               }`}
               data-testid={`figure-project-photo-${index}`}
             >
@@ -109,10 +102,6 @@ export default function ProjectGallery({
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 data-testid={`img-project-photo-${index}`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-              <figcaption className="absolute bottom-0 left-0 right-0 p-4 md:p-5 text-white font-semibold">
-                {photo.label}
-              </figcaption>
             </figure>
           ))}
         </div>

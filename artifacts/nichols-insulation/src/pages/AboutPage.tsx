@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationWorkerImg from '@assets/jobs5_1788023621577.jpg';
+import insulationWorkerImg from '@assets/jobs4_1788023621576.jpg';
 import { CheckCircle2, Shield, HeartHandshake, Award } from 'lucide-react';
 import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 

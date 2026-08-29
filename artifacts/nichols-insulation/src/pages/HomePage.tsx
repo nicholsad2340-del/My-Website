@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationWorkerImg from '@assets/jobs5_1788023621577.jpg';
-import insulationBattImg from '@assets/jobs4_1788023621576.jpg';
+import insulationWorkerImg from '@assets/jobs1_1788023621573.jpg';
+import insulationBattImg from '@assets/jobs2_1788023621575.jpg';
 import { CheckCircle2, Home, Building2, Leaf, ShieldCheck, MapPin } from 'lucide-react';
 import { SiGoogle } from 'react-icons/si';
 import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';

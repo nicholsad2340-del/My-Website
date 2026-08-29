@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'wouter';
-import insulationBattImg from '@assets/jobs4_1788023621576.jpg';
+import insulationBattImg from '@assets/jobs7_1788023621578.jpg';
 import { Wind, Layers, Sun, Factory, CheckCircle2 } from 'lucide-react';
 import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
 
