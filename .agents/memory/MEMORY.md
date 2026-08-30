@@ -1,0 +1,1 @@
+- [GitHub publishing](github-publish-cloudflare.md) — connected-integration writes may require small batches; present persistently blocked HTML files for manual upload.

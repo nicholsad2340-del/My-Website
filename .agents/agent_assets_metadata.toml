@@ -1,0 +1,9 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "0nEfSGm9Rxn-Z-b-9gkjs"
+uri = "file://artifacts/nichols-insulation/index.html"
+type = "text"
+title = "Nichols Insulation GitHub index.html"
+description = "Upload this as artifacts/nichols-insulation/index.html in your GitHub repository."
