@@ -83,9 +83,7 @@ export default function AboutPage() {
             <div className="pt-6 border-t border-white/20 mt-8 bg-white/5 p-4 rounded-lg">
               <p className="font-bold text-center mb-2 text-white/90">Direct Contact:</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 text-center text-lg">
-                <span>James: <a href="tel:9313204426" className="text-accent font-bold hover:underline">(931) 320-4426</a></span>
-                <span className="hidden sm:inline">|</span>
-                <span>Adam: <a href="tel:9318015391" className="text-accent font-bold hover:underline">(931) 801-5391</a></span>
+                <a href="tel:9313269492" className="text-accent font-bold hover:underline">Call us Today: 931-326-9492</a>
               </div>
             </div>
           </div>

@@ -81,7 +81,7 @@ export default function ContactPage() {
           {/* Left Column - Contact Info */}
           <div className="space-y-10">
             <div>
-              <h3 className="text-3xl font-serif font-bold text-foreground mb-3" data-testid="heading-contact-info">Contact Adam Nichols</h3>
+              <h3 className="text-3xl font-serif font-bold text-foreground mb-3" data-testid="heading-contact-info">Call us Today</h3>
               <p className="text-lg text-foreground/70" data-testid="text-contact-no-pressure">No pressure, no obligation.</p>
             </div>
 
@@ -92,8 +92,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <strong className="block text-foreground text-lg font-bold mb-1">Phone</strong>
-                  <a href="tel:9318015391" className="text-xl text-primary hover:underline hover:text-accent transition-colors font-medium" data-testid="link-contact-phone">
-                    (931) 801-5391
+                  <a href="tel:9313269492" className="text-xl text-primary hover:underline hover:text-accent transition-colors font-medium" data-testid="link-contact-phone">
+                    931-326-9492
                   </a>
                 </div>
               </div>
@@ -322,10 +322,10 @@ export default function ContactPage() {
       {/* CTA Banner */}
       <section className="py-20 px-4 bg-accent text-white text-center">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold" data-testid="heading-cta-contact">Prefer to Call?</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold" data-testid="heading-cta-contact">Call us Today</h2>
           <div className="pt-4">
-            <a href="tel:9318015391" className="inline-block px-10 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-2xl shadow-lg" data-testid="link-cta-contact-phone">
-              (931) 801-5391
+            <a href="tel:9313269492" className="inline-block px-10 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-2xl shadow-lg" data-testid="link-cta-contact-phone">
+              931-326-9492
             </a>
           </div>
         </div>

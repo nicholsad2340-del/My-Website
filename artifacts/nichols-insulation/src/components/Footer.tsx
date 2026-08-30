@@ -12,8 +12,8 @@ export default function Footer() {
               Expert residential and commercial insulation — on time, within budget, and built to last decades.
             </p>
             <div className="pt-2">
-              <a href="tel:9318015391" className="text-accent text-xl font-bold hover:underline" data-testid="link-footer-phone">
-                (931) 801-5391
+              <a href="tel:9313269492" className="text-accent text-xl font-bold hover:underline" data-testid="link-footer-phone">
+                Call us Today: 931-326-9492
               </a>
             </div>
           </div>

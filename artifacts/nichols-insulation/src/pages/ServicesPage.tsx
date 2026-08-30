@@ -115,7 +115,7 @@ export default function ServicesPage() {
             <Link href="/contact" className="px-8 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg w-full sm:w-auto" data-testid="button-cta-services">
               Request Your Free Estimate
             </Link>
-            <span className="text-2xl font-bold" data-testid="text-cta-services-phone">(931) 801-5391</span>
+            <span className="text-2xl font-bold" data-testid="text-cta-services-phone">Call us Today: 931-326-9492</span>
           </div>
         </div>
       </section>

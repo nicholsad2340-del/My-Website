@@ -20,13 +20,12 @@ export default function Header() {
       <div className="hidden md:flex bg-secondary text-white py-2 px-8 justify-end text-sm border-b border-secondary-foreground/10">
         <div className="flex space-x-6 items-center">
           <a href="mailto:adam@nicholsinsulation.com" className="hover:text-accent transition-colors" data-testid="link-email-top">adam@nicholsinsulation.com</a>
-          <span>James: <a href="tel:9313204426" className="text-accent font-bold hover:underline" data-testid="link-phone-james"> (931) 320-4426</a></span>
-          <span>Adam: <a href="tel:9318015391" className="text-accent font-bold hover:underline" data-testid="link-phone-adam"> (931) 801-5391</a></span>
+          <span>Call us Today: <a href="tel:9313269492" className="text-accent font-bold hover:underline" data-testid="link-phone-top">931-326-9492</a></span>
         </div>
       </div>
 
-      {/* Nav Bar (Forest Green) */}
-      <nav className="bg-primary text-white sticky top-0 shadow-md">
+      {/* Nav Bar (Warm Off-White) */}
+      <nav className="bg-background text-primary sticky top-0 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
@@ -43,7 +42,7 @@ export default function Header() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-1">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className={`px-4 py-2 rounded-md font-medium transition-colors ${location === link.href ? 'bg-white text-primary' : 'hover:bg-primary-foreground/10'}`} data-testid={`nav-link-${link.label.toLowerCase()}`}>
+                <Link key={link.href} href={link.href} className={`px-4 py-2 rounded-md font-medium transition-colors ${location === link.href ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`} data-testid={`nav-link-${link.label.toLowerCase()}`}>
                   {link.label}
                 </Link>
               ))}
@@ -58,7 +57,7 @@ export default function Header() {
             <div className="md:hidden flex items-center">
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="text-white p-2 focus:outline-none"
+                className="text-primary p-2 focus:outline-none"
                 data-testid="button-mobile-menu"
               >
                 {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -69,12 +68,12 @@ export default function Header() {
 
         {/* Mobile Menu Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-primary border-t border-primary-foreground/10 pb-4 pt-2">
+          <div className="md:hidden bg-background border-t border-primary/10 pb-4 pt-2">
             <div className="px-4 space-y-2">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <div 
-                    className={`block px-4 py-3 rounded-md font-medium ${location === link.href ? 'bg-white text-primary' : 'hover:bg-primary-foreground/10'}`}
+                    className={`block px-4 py-3 rounded-md font-medium ${location === link.href ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`}
                     onClick={() => setMobileMenuOpen(false)}
                     data-testid={`nav-link-mobile-${link.label.toLowerCase()}`}
                   >
