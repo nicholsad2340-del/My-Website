@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 import insulationBattImg from '@assets/jobs7_1788023621578.jpg';
 import { Wind, Layers, Sun, Factory, CheckCircle2 } from 'lucide-react';
 import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
@@ -100,7 +100,7 @@ export default function ServicesPage() {
             Our free on-site assessment includes a professional R-value recommendation, material comparison, and a fully transparent quote so you know exactly what you're paying for.
           </p>
           <div className="pt-6">
-            <Link href="/contact" className="inline-block px-10 py-4 bg-white text-primary font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg" data-testid="button-schedule-assessment">
+            <Link to="/contact" className="inline-block px-10 py-4 bg-white text-primary font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg" data-testid="button-schedule-assessment">
               Schedule a Free Assessment
             </Link>
           </div>
@@ -112,7 +112,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-4xl md:text-5xl font-serif font-bold" data-testid="heading-cta-services">Every Home is Different. Your Quote Should Be Too.</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <Link href="/contact" className="px-8 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg w-full sm:w-auto" data-testid="button-cta-services">
+            <Link to="/contact" className="px-8 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg w-full sm:w-auto" data-testid="button-cta-services">
               Request Your Free Estimate
             </Link>
             <span className="text-2xl font-bold" data-testid="text-cta-services-phone">Call us Today: 931-326-9492</span>

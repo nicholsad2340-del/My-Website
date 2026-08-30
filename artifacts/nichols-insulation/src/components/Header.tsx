@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'wouter';
+import { Link, NavLink } from 'react-router-dom';
 import logoPath from '@assets/Logo_1783106526737.png';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -29,7 +28,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link href="/">
+              <Link to="/">
                 <img 
                   src={logoPath} 
                   alt="Nichols Insulation Logo Small" 
@@ -42,12 +41,18 @@ export default function Header() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-1">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href} className={`px-4 py-2 rounded-md font-medium transition-colors ${location === link.href ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`} data-testid={`nav-link-${link.label.toLowerCase()}`}>
+                <NavLink
+                  key={link.href}
+                  to={link.href}
+                  end={link.href === '/'}
+                  className={({ isActive }) => `px-4 py-2 rounded-md font-medium transition-colors ${isActive ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`}
+                  data-testid={`nav-link-${link.label.toLowerCase()}`}
+                >
                   {link.label}
-                </Link>
+                </NavLink>
               ))}
               <div className="pl-4">
-                <Link href="/contact" className="bg-accent hover:bg-[#d67118] text-white px-6 py-2.5 rounded-md font-bold transition-colors shadow-sm" data-testid="button-free-estimate-nav">
+                <Link to="/contact" className="bg-accent hover:bg-[#d67118] text-white px-6 py-2.5 rounded-md font-bold transition-colors shadow-sm" data-testid="button-free-estimate-nav">
                   Free Estimate
                 </Link>
               </div>
@@ -71,18 +76,19 @@ export default function Header() {
           <div className="md:hidden bg-background border-t border-primary/10 pb-4 pt-2">
             <div className="px-4 space-y-2">
               {navLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <div 
-                    className={`block px-4 py-3 rounded-md font-medium ${location === link.href ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                    data-testid={`nav-link-mobile-${link.label.toLowerCase()}`}
-                  >
-                    {link.label}
-                  </div>
-                </Link>
+                <NavLink
+                  key={link.href}
+                  to={link.href}
+                  end={link.href === '/'}
+                  className={({ isActive }) => `block px-4 py-3 rounded-md font-medium ${isActive ? 'bg-primary/10 text-primary' : 'text-primary hover:bg-primary/10'}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                  data-testid={`nav-link-mobile-${link.label.toLowerCase()}`}
+                >
+                  {link.label}
+                </NavLink>
               ))}
               <div className="pt-4 pb-2">
-                <Link href="/contact">
+                <Link to="/contact">
                   <div 
                     className="block text-center bg-accent text-white px-4 py-3 rounded-md font-bold shadow-sm"
                     onClick={() => setMobileMenuOpen(false)}

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 import insulationWorkerImg from '@assets/jobs1_1788023621573.jpg';
 import insulationBattImg from '@assets/jobs2_1788023621575.jpg';
 import { CheckCircle2, Home, Building2, Leaf, ShieldCheck, MapPin } from 'lucide-react';
@@ -32,10 +32,10 @@ export default function HomePage() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 animate-in slide-in-from-bottom-6 duration-700 delay-700 fill-mode-both">
-            <Link href="/contact" className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-[#d67118] text-white font-bold rounded-md transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl text-lg" data-testid="button-hero-primary">
+            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 bg-accent hover:bg-[#d67118] text-white font-bold rounded-md transition-all hover:-translate-y-1 shadow-lg hover:shadow-xl text-lg" data-testid="button-hero-primary">
               Get a Free Estimate
             </Link>
-            <Link href="/services" className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold rounded-md transition-all text-lg" data-testid="button-hero-secondary">
+            <Link to="/services" className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold rounded-md transition-all text-lg" data-testid="button-hero-secondary">
               Our Services
             </Link>
           </div>
@@ -182,7 +182,7 @@ export default function HomePage() {
             Call us today or request your free, no-obligation estimate online.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
-            <Link href="/contact" className="px-8 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg w-full sm:w-auto" data-testid="button-cta-home">
+            <Link to="/contact" className="px-8 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg w-full sm:w-auto" data-testid="button-cta-home">
               Get a Free Estimate
             </Link>
             <span className="text-2xl font-bold" data-testid="text-cta-home-phone">Call us Today: 931-326-9492</span>

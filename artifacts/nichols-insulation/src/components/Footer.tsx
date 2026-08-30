@@ -1,4 +1,4 @@
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -23,22 +23,22 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 text-white uppercase tracking-wider" data-testid="text-footer-services-heading">Our Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-1">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-1">
                   Blown-In Insulation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-2">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-2">
                   Batt & Roll Insulation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-3">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-3">
                   Radiant Barriers
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-4">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-service-4">
                   Commercial Insulation
                 </Link>
               </li>
@@ -50,22 +50,22 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 text-white uppercase tracking-wider" data-testid="text-footer-company-heading">Company</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-home">
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-home">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-about">
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-about">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-services">
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-services">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-contact">
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" data-testid="link-footer-contact">
                   Contact
                 </Link>
               </li>

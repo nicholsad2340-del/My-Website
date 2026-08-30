@@ -12,10 +12,28 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Nichols Insulation" />
     <meta name="twitter:description" content="Nichols Insulation — built on Replit. Update this description to reflect the app." />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var redirectedPath = params.get('p');
+
+        if (!redirectedPath) return;
+
+        var basePath = window.location.pathname.replace(/\/+$/, '');
+        var query = params.get('q');
+        var targetPath = basePath + (redirectedPath.charAt(0) === '/' ? redirectedPath : '/' + redirectedPath);
+
+        window.history.replaceState(
+          null,
+          '',
+          targetPath + (query ? '?' + query : '') + window.location.hash
+        );
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

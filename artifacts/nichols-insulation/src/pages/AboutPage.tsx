@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'wouter';
+import { Link } from 'react-router-dom';
 import insulationWorkerImg from '@assets/jobs4_1788023621576.jpg';
 import { CheckCircle2, Shield, HeartHandshake, Award } from 'lucide-react';
 import ProjectGallery, { jobPhotoSets } from '@/components/ProjectGallery';
@@ -133,7 +133,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto space-y-8">
           <h2 className="text-4xl md:text-5xl font-serif font-bold" data-testid="heading-cta-about">Meet the Team Behind the Work</h2>
           <div className="pt-4">
-            <Link href="/contact" className="inline-block px-10 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg" data-testid="button-cta-about">
+            <Link to="/contact" className="inline-block px-10 py-4 bg-white text-accent font-bold rounded-md hover:bg-background transition-colors text-lg shadow-lg" data-testid="button-cta-about">
               Contact Us Today
             </Link>
           </div>
