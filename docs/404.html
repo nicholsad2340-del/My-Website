@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nichols Insulation</title>
+    <script>
+      (function (location) {
+        var pathSegmentsToKeep = 1;
+        var pathSegments = location.pathname.split('/');
+        var basePath = pathSegments.slice(0, 1 + pathSegmentsToKeep).join('/');
+        var routePath = pathSegments.slice(1 + pathSegmentsToKeep).join('/');
+        var redirectUrl = location.protocol + '//' + location.host + basePath + '/?p=/' + encodeURIComponent(routePath);
+
+        if (location.search) {
+          redirectUrl += '&q=' + encodeURIComponent(location.search.slice(1));
+        }
+
+        location.replace(redirectUrl + location.hash);
+      })(window.location);
+    </script>
+  </head>
+  <body></body>
+</html>
